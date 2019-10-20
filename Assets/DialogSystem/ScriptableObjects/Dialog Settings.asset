@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33d7642fdc73144dad5fdae60813526, type: 3}
+  m_Name: Dialog Settings
+  m_EditorClassIdentifier: 
+  dialogData:
+  - name: Welcome
+    dialog: Welcome to the system. This is a simple dialog system
+    actor: 1
+    audioClip: {fileID: 0}
+    characterImage: {fileID: 0}
+  - name: Hey
+    dialog: Hey. This feels new
+    actor: 2
+    audioClip: {fileID: 0}
+    characterImage: {fileID: 0}
+  - name: Hello
+    dialog: Yes this is. A simple Coroutine.
+    actor: 1
+    audioClip: {fileID: 0}
+    characterImage: {fileID: 0}
+  - name: Oh..
+    dialog: Oh.. And where does data come from?
+    actor: 2
+    audioClip: {fileID: 0}
+    characterImage: {fileID: 0}
+  - name: That
+    dialog: That comes from Scriptable Object
+    actor: 1
+    audioClip: {fileID: 0}
+    characterImage: {fileID: 0}
+  - name: Neat
+    dialog: Neat trick bro
+    actor: 2
+    audioClip: {fileID: 0}
+    characterImage: {fileID: 0}
