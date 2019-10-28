@@ -13,33 +13,26 @@ MonoBehaviour:
   m_Name: Dialog Settings
   m_EditorClassIdentifier: 
   dialogData:
-  - name: Welcome
-    dialog: Welcome to the system. This is a simple dialog system
-    actor: 1
-    audioClip: {fileID: 0}
-    characterImage: {fileID: 0}
-  - name: Hey
-    dialog: Hey. This feels new
-    actor: 2
-    audioClip: {fileID: 0}
-    characterImage: {fileID: 0}
   - name: Hello
-    dialog: Yes this is. A simple Coroutine.
+    dialog: Hello in consideration to others around you,would you please enter your
+      phone word and turn it off
     actor: 1
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 9fcb1a88fe59e8e4eaaacc353592006b, type: 3}
     characterImage: {fileID: 0}
-  - name: Oh..
-    dialog: Oh.. And where does data come from?
+  - name: World
+    dialog: In a world where cybers have risen and warriors have fallen, one man attempts
+      to save one girl, but in the end all they can do is rot!
     actor: 2
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 3ff4a5cec29894b42b1f7c6b18c75f7b, type: 3}
     characterImage: {fileID: 0}
-  - name: That
-    dialog: That comes from Scriptable Object
+  - name: Heard
+    dialog: I have definitly heard it this time. I am gonna go upstairs and check
+      the other recorders. yeah
     actor: 1
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: e3ce98a704153e74a9f5afcc22f2f119, type: 3}
     characterImage: {fileID: 0}
-  - name: Neat
-    dialog: Neat trick bro
+  - name: Game Over
+    dialog: Game... Over...
     actor: 2
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: fbd3fcd799a00324693fb5e022ba950d, type: 3}
     characterImage: {fileID: 0}

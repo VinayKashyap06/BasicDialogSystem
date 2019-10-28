@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Playables;
+using SoundSystem;
 using UnityEngine.Timeline;
 using System;
 
@@ -22,12 +23,10 @@ namespace DialogSystem
         private List<DialogData> dialogData = new List<DialogData>();
         private bool skipPressed=false;
         private int activeDialogIndex;
-        private float waitTime=3f;
+        private float waitTime=0f;
         private Image currentActor;
         private Image previousActor;
         #endregion
-
-
 
         private void Start()
         {
@@ -41,10 +40,14 @@ namespace DialogSystem
         private void Toggleskip()
         {
             skipPressed = true;
+            ServiceSound.Instance.StopCurrentClip();
+            waitTime = 0;
+            skipPressed = false;
         }
 
         IEnumerator FetchDialog()
         {
+
             for (int i = 0; i < dialogData.Count; i++)
             {                
                 previousActor = currentActor;
@@ -54,28 +57,16 @@ namespace DialogSystem
                 currentActor.color = Color.white;
 
                 dialog.text = dialogData[i].dialog;
-                
-                //director.Play();
-                if (skipPressed)
+                if (dialogData[i].audioClip!=null)
                 {
-                    waitTime = 1f;
-                    skipPressed = false;
-
+                    ServiceSound.Instance.PlayClip( dialogData[i].audioClip);
+                    waitTime = dialogData[i].audioClip.length;
+                    Debug.Log(waitTime);
                 }
-                else
-                {                    
-                    //director.Stop();
-                    waitTime = 3f;
-                }                
-                yield return new WaitForSeconds(waitTime);                    
+
                 yield return new WaitForEndOfFrame();
+                yield return new WaitForSeconds(waitTime);
             }
-        }
-
-        void DisplayDialog()
-        {
-            dialog.text = dialogData[activeDialogIndex].dialog;
-
-        }
+        }        
     }
 }
